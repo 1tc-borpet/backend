@@ -22,7 +22,7 @@ class TaskFactory extends Factory
             'title' => $this->faker->sentence(3),
             'description' => $this->faker->paragraph(),
             'priority' => $this->faker->randomElement(['low', 'medium', 'high', 'urgent']),
-            'due_date' => $this->faker->dateTimeBetween('+1 day', '+30 days'),
+            'due_date' => $this->faker->dateTimeBetween('now', '+3 months'),
             'status' => $this->faker->randomElement($statuses),
         ];
     }
